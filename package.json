@@ -1,0 +1,31 @@
+{
+  "name": "clasp-esm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "rollup -c rollups/config.dev.js",
+    "deploy:dev": "npm run build:dev && cd clasp/dev && clasp push",
+    "build:prod": "rollup -c rollups/config.prod.js",
+    "deploy:prod": "npm run build:prod && cd clasp/prod && clasp push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@google/clasp": "^2.4.1",
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@types/google-apps-script": "^1.0.55",
+    "esbuild": "^0.15.7",
+    "eslint": "^8.23.1",
+    "prettier": "^2.7.1",
+    "rollup-plugin-esbuild": "^4.10.1",
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.2"
+  },
+  "volta": {
+    "node": "18.9.0"
+  }
+}
